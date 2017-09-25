@@ -10,8 +10,11 @@
       <target file="stm32f4xx_gpio.o" lastModified="15eb7d01bf3">
          <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15eb7ce051f"/>
       </target>
-      <target file="main.o" lastModified="15eb7db7fba">
-         <source file="..\..\..\main.c" lastModified="15eb7db6e56"/>
+      <target file="main.o" lastModified="15eb8314444">
+         <source file="..\..\..\main.c" lastModified="15eb8313450"/>
+      </target>
+      <target file="syscalls.o" lastModified="15eb7ec4918">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="15eb7eb81f3"/>
       </target>
       <target file="startup_stm32f4xx.o" lastModified="15eb7d019ff">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15eb7cd26d4"/>

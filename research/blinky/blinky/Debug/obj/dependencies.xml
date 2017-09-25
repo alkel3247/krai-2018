@@ -8,16 +8,13 @@
       </source>
       <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15eb7cd2ec2">
       </source>
+      <source file="..\..\..\syscalls\syscalls.c" lastModified="15eb7eb9193">
+      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15eb7ce051f">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15eb7cd26d4">
-      </source>
-      <source file="..\..\..\main.c" lastModified="15eb7db6e56">
-         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
       </source>
       <source file="..\..\..\cmsis\core_cm4.h" lastModified="15eb7cd2ada">
          <include file="..\..\..\cmsis\core_cmInstr.h"/>
