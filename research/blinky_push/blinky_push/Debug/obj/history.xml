@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 4.8.2 i686-w64-mingw32 -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research\blinky_push\cmsis_lib -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research\blinky_push\cmsis_lib\include -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research\blinky_push\cmsis_boot -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research\blinky_push -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research\blinky_push\cmsis -I..\..\..\..\..\Users\Rizky\jk\krai-2018\research">
+      <target file="stm32f4xx_rcc.o" lastModified="15eb85d56af">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15eb85a20af"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="15eb85d578f">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15eb85a1f30"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="15eb85d5704">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15eb85a1edb"/>
+      </target>
+      <target file="main.o" lastModified="15eb85d5620">
+         <source file="..\..\..\main.c" lastModified="15eb85cff4d"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="15eb85d5567">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15eb85a1eff"/>
+      </target>
+   </processor>
+</history>
