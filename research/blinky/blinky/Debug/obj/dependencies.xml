@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research /I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_boot /I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis /I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky /I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_lib /I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_lib\include">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="15eb7ce051b">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15eb7cd2ec2">
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15eb7cd2ec2">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15eb7ce051f">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15eb7cd26d4">
+      </source>
+      <source file="..\..\..\main.c" lastModified="15eb7db6e56">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm4.h" lastModified="15eb7cd2ada">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+         <include file="..\..\..\cmsis\core_cm4_simd.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="15eb7cd26de">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="15eb7ce0524">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15eb7cd26de">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="15eb7cd2ec2">
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="15eb7cd80b6">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f4xx.h" lastModified="15eb7cd2abc">
+         <include file="..\..\..\cmsis\core_cm4.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f4xx_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15eb7ce052e">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+   </includePath>
+</dependencies>

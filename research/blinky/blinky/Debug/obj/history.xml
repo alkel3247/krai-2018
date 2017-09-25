@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_boot -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_lib -I..\..\..\..\..\Users\Eufrat Tsaqib\Documents\GitHub\krai-2018\research\blinky\cmsis_lib\include">
+      <target file="stm32f4xx_rcc.o" lastModified="15eb7d01b49">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15eb7ce052e"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="15eb7d01c73">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15eb7cd26de"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="15eb7d01bf3">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15eb7ce051f"/>
+      </target>
+      <target file="main.o" lastModified="15eb7db7fba">
+         <source file="..\..\..\main.c" lastModified="15eb7db6e56"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="15eb7d019ff">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15eb7cd26d4"/>
+      </target>
+   </processor>
+</history>
