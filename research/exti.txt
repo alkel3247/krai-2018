@@ -1,0 +1,49 @@
+volatile uint8_t counter = 0;
+ 
+int main(void) {
+    /* Initialize system */
+    SystemInit();
+ 
+    /* Initialize LEDS */
+    TM_DISCO_LedInit();
+    
+    /* Attach interrupt on pin PA0 = External line 0 */
+    /* Button connected on discovery boards */
+    if (TM_EXTI_Attach(GPIOA, GPIO_Pin_0, TM_EXTI_Trigger_Rising) == TM_EXTI_Result_Ok) {
+        TM_DISCO_LedOn(LED_RED);
+    }
+    
+    /* Attach interrupt on pin PC13 = External line 13 */
+    /* Button connected on nucleo boards */
+    if (TM_EXTI_Attach(GPIOC, GPIO_Pin_13, TM_EXTI_Trigger_Falling) == TM_EXTI_Result_Ok) {
+        TM_DISCO_LedOn(LED_GREEN);
+    }
+    
+    while (1) {
+        
+    }
+}
+ 
+void TM_EXTI_Handler(uint16_t GPIO_Pin) {
+    /* Handle external line 0 interrupts */
+    if (GPIO_Pin == GPIO_Pin_0) {
+        /* Toggle RED led */
+        TM_DISCO_LedToggle(LED_RED);
+        /* Check counter */
+        if (++counter >= 10) {
+            /* Detach external interrupt for GPIO_Pin_0 no matter on which GPIOx is connected */
+            TM_EXTI_Detach(GPIO_Pin_0);
+        }
+    }
+    
+    /* Handle external line 13 interrupts */
+    if (GPIO_Pin == GPIO_Pin_13) {
+        /* Toggle GREEN led */
+        TM_DISCO_LedToggle(LED_GREEN);
+        /* Check counter */
+        if (++counter >= 10) {
+            /* Detach external interrupt for GPIO_Pin_0 no matter on which GPIOx is connected */
+            TM_EXTI_Detach(GPIO_Pin_13);
+}
+}
+}

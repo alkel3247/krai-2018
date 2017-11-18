@@ -1,0 +1,68 @@
+#include "stm32f4xx.h"
+#include "stm32f4xx_rcc.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_exti.h"
+#include "stm32f4xx_syscfg.h"
+#include "stm32f4xx_tim.h"
+#include "misc.h"
+#include "defines.h"
+#include "tm_stm32f4_timer_properties.h"
+#include "tm_stm32f4_gpio.h"
+#include "tm_stm32f4_exti.h"
+#include "tm_stm32f4_rotary_encoder.h"
+#include "tm_stm32f4_pwm.h"
+#include "delay.h"
+
+
+int main(void) {
+
+	DELAY_Init();
+	timer_init();
+
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+	GPIO_InitTypeDef da;
+	da.GPIO_Mode = GPIO_Mode_OUT;
+	da.GPIO_OType = GPIO_OType_PP;
+	da.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_15;
+	da.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	da.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_Init(GPIOD, &da);
+    while (1) {
+    	GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
+    }
+}
+
+void timer_init(){
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+	TIM_TimeBaseInitTypeDef susu;
+	// TIM2 initialization overflow every 500ms
+	// TIM2 by default has clock of 84MHz
+	// Here, we must set value of prescaler and period,
+	// so update event is 0.5Hz or 500ms
+	// Update Event (Hz) = timer_clock / ((TIM_Prescaler + 1) *
+	// (TIM_Period + 1))
+	// Update Event (Hz) = 84MHz / ((4199 + 1) * (9999 + 1)) = 0.5 Hz
+	susu.TIM_Prescaler = 4199;
+	susu.TIM_Period = 9999;
+	susu.TIM_ClockDivision = TIM_CKD_DIV1;
+	susu.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseInit(TIM2, &susu);
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	TIM_Cmd(TIM2, ENABLE);
+
+	NVIC_InitTypeDef haha;
+	haha.NVIC_IRQChannel = TIM2_IRQn;
+	haha.NVIC_IRQChannelPreemptionPriority = 0;
+	haha.NVIC_IRQChannelSubPriority = 0;
+	haha.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&haha);
+}
+
+void TIM2_IRQHandler(){
+	if(TIM_GetITStatus(TIM2, TIM_IT_Update)){
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
+		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	}
+}
+
+
